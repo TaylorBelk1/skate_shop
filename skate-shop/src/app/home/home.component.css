@@ -1,0 +1,17 @@
+.products-wrap {
+    width:75%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item-box {
+    width: 300px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.thumbnail {
+    width: 300px;
+}

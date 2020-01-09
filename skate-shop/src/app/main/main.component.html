@@ -1,9 +1,16 @@
 <div class="app-wrapper">
   <nav>
     <app-navigation></app-navigation>
+    <div>
+      <app-categories-bar></app-categories-bar>
+    </div>
   </nav>
 
-  <div class="content">
+
+  <div *ngIf='loading'>
+    <app-loading></app-loading>
+  </div>
+  <div *ngIf='!loading' class="content">
     <router-outlet></router-outlet>
   </div>
 

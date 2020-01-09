@@ -1,3 +1,7 @@
-<p>
-  home works!
-</p>
+<div class='products-wrap'>
+  <div *ngFor='let item of items' class='item-box'>
+    <img src={{baseUrl}}{{item.image_url}} alt={{item.image_name}} class='thumbnail' />
+    <h5>{{item.name}}</h5>
+    <p>${{item.price}}</p>
+  </div>
+</div>

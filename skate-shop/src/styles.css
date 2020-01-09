@@ -52,3 +52,135 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Start Font Imports */
+
+/* BUNGEE */
+@font-face {
+	font-family: "Bungee-Inline";
+	src: url('./assets/fonts/BungeeInline/BungeeInline-Regular.ttf');
+}
+
+/* RALEWAY */
+@font-face {
+	font-family: "Raleway-Black";
+	src: url('./assets/fonts/Raleway/Raleway-Black.ttf');
+}
+
+@font-face {
+	font-family: "Raleway-Bold";
+	src: url('./assets/fonts/Raleway/Raleway-Bold.ttf');
+}
+
+@font-face {
+	font-family: "Raleway-Extra-Bold";
+	src: url('./assets/fonts/Raleway/Raleway-ExtraBold.ttf');
+}
+
+@font-face {
+	font-family: "Raleway-Extra-Light";
+	src: url('./assets/fonts/Raleway/Raleway-ExtraLight.ttf');
+}
+
+@font-face {
+	font-family: "Raleway-Light";
+	src: url('./assets/fonts/Raleway/Raleway-Light.ttf');
+}
+
+@font-face {
+	font-family: "Raleway-Medium";
+	src: url('./assets/fonts/Raleway/Raleway-Medium.ttf');
+}
+
+@font-face {
+	font-family: "Raleway-Regular";
+	src: url('./assets/fonts/Raleway/Raleway-Regular.ttf');
+}
+
+@font-face {
+	font-family: "Raleway-Semi-Bold";
+	src: url('./assets/fonts/Raleway/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: "Raleway-Semi-Bold";
+	src: url('./assets/fonts/Raleway/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: "Raleway-Thin";
+	src: url('./assets/fonts/Raleway/Raleway-Thin.ttf');
+}
+
+/* ROBOTO */
+
+@font-face {
+	font-family: "Roboto-Black";
+	src: url('./assets/fonts/Roboto/Roboto-Black.ttf');
+}
+
+@font-face {
+	font-family: "Roboto-Bold";
+	src: url('./assets/fonts/Roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+	font-family: "Roboto-Light";
+	src: url('./assets/fonts/Roboto/Roboto-Light.ttf');
+}
+
+@font-face {
+	font-family: "Roboto-Medium";
+	src: url('./assets/fonts/Roboto/Roboto-Medium.ttf');
+}
+
+@font-face {
+	font-family: "Roboto-Regular";
+	src: url('./assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+	font-family: "Roboto-Thin";
+	src: url('./assets/fonts/Roboto/Roboto-Thin.ttf');
+}
+
+h1 {
+	font-family: "Bungee-Inline";
+	font-size: 26px;
+}
+
+h2, h3, h4 {
+	font-family: "Raleway-Semi-Bold";
+	font-size: 18px;
+}
+
+h5, h6 {
+	font-family: "Raleway-Light";
+	font-size: 18px;
+}
+
+p, li, a {
+	font-family: "Roboto-Regular";
+	font-size: 14px;
+}
+
+button {
+	font-size: 16px;
+}
+
+
+/* SHARED STYLES */
+
+.round-corners {
+    border-radius: 3px;
+}
+
+
+
+/* Colors
+Black - #0D1B2A
+dark blue - #1B263B
+blue jeans blue - #415A77
+lighter blue - #778DA9
+grayish - #E0E1DD
+*/

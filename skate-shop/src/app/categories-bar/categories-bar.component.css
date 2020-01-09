@@ -1,0 +1,13 @@
+.cat-bar-wrapper {
+    width: 100%;
+    border-bottom: 1px solid #E0E1DD;
+}
+
+.cat-bar-wrapper ul {
+    width: 95%;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
