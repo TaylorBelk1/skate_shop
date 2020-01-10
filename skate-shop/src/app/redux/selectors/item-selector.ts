@@ -14,3 +14,10 @@ export const getAllCategories = createSelector(
     (state: ItemResponse) => state.categories
 );
 
+export const getSingleItem = createSelector(
+    getItemState,
+    (state: ItemResponse, id: number) => {
+        const current = state.item.filter(i => i.id === id);
+        return current[0];
+    }
+)

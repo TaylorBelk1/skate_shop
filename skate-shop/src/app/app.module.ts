@@ -10,7 +10,6 @@ import { MainComponent } from './main/main.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -18,13 +17,8 @@ import { appReducers } from './redux';
 import { ItemEffects } from './redux/effects/item-effects';
 import { LoadingComponent } from './loading/loading.component';
 import { CategoriesBarComponent } from './categories-bar/categories-bar.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: '**', component: PageNotFoundComponent }
-]
 
 
 @NgModule({
@@ -38,7 +32,8 @@ const appRoutes: Routes = [
     RegisterComponent,
     PageNotFoundComponent,
     LoadingComponent,
-    CategoriesBarComponent
+    CategoriesBarComponent,
+    ProductPageComponent
   ],
   imports: [
     StoreModule.forRoot(appReducers),
@@ -46,9 +41,6 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(
-      appRoutes,
-    )
   ],
   providers: [],
   bootstrap: [AppComponent]

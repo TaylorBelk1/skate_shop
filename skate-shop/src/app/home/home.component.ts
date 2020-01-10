@@ -23,10 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.toggleLoading(true);
     this.baseUrl = environment.baseUrl;
-    const sub = this.store.select(getAllItems).subscribe(res => {
-      console.log(res)
-      this.items = res;
-    });
+    const sub = this.store.select(getAllItems).subscribe(res => this.items = res);
 
     if (this.items !== null || this.items !== undefined) {
         this.toggleLoading(false);

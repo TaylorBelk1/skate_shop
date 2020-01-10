@@ -1,0 +1,43 @@
+<div *ngIf='!loading'>
+  <div *ngIf='item' class='details-wrap'>
+    <div>
+      <p (click)='handleGoBack()'>back to results</p>
+    </div>
+    <br />
+    <div>
+      <h2>{{item.name}}</h2>
+      <br />
+      <p>Item # {{item.id}}</p>
+    </div>
+    <div class='columns-wrap'>
+      <div class='img-section'>
+        <img src={{baseUrl}}{{item.image_url}} alt={{item.image_name}} />
+      </div>
+
+      <div class='desc-section'>
+        <h6>${{item.price}}</h6>
+
+        <div>
+          <p class='sub-title'>Quantity: </p>
+          <div class='quantity-counter'>
+            <p>{{quantity}}</p>
+            <button (click)='handleDecreaseCounter()'>-</button>
+            <button (click)='handleIncreaseCounter()'>+</button>
+          </div>
+
+        </div>
+
+        <p class='sub-title'>Description:</p>
+        <p>{{item.description}}</p>
+
+        <div *ngIf="specs">
+          <p class='sub-title'>Specs:</p>
+          <ul class='spec-list'>
+            <li *ngFor="let spec of specs">{{spec}}</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
