@@ -1,6 +1,6 @@
 import { ActionReducerMap } from '@ngrx/store';
 
-import { cartReducer } from './reducers/cart-actions';
+import { cartReducer } from './reducers/cart-reducer';
 import { customerReducer } from './reducers/customer-reducer';
 import { eventReducer } from './reducers/event-reducers';
 import { itemReducer } from './reducers/item-reducers';

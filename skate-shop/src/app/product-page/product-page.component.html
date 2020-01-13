@@ -24,6 +24,13 @@
             <button (click)='handleDecreaseCounter()'>-</button>
             <button (click)='handleIncreaseCounter()'>+</button>
           </div>
+          <div>
+            <br />
+            <button (click)="handleAddToCart()" class="add-to-cart">Add To Cart</button>
+            <br />
+            <br />
+            <div *ngIf='showAdded' class="added">Added to cart!</div>
+          </div>
 
         </div>
 

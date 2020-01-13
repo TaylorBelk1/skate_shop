@@ -8,6 +8,8 @@ import { getAllItems, getSingleItem } from '../redux/selectors/item-selector';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { switchMap } from 'rxjs/operators';
+import { Cart } from '../redux/models/types/cart.model';
+import { AddToCart } from '../redux/actions/cart-actions';
 // tslint:disable: radix
 // tslint:disable: curly
 @Component({
@@ -21,6 +23,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   baseUrl: string;
   specs: string[];
   quantity: number;
+  showAdded: boolean;
 
   constructor(
     public store: Store<AppState>,
@@ -28,7 +31,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     private router: Router,
   ) {
     this.mainSub = new Subscription();
-    this.quantity = 12;
+    this.quantity = 0;
+    this.showAdded = false;
   }
 
   ngOnInit() {
@@ -39,7 +43,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     const itemSub = this.store.select(getSingleItem, tempId)
       .subscribe(res => {
         this.item = res;
-        if(res) this.specs = this.handleSplitSpecs(res.specs);
+        if (res) this.specs = this.handleSplitSpecs(res.specs);
       });
 
     this.handleAddToSubList([itemSub]);
@@ -73,6 +77,24 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   handleGoBack = () => {
     this.router.navigate(['/home']);
+  }
+
+  handleAddToCart = () => {
+    if(this.quantity > 0) {
+      const tempCart: Cart = {
+        info: {
+          product_id: this.item.id,
+          quantity: this.quantity
+        },
+        items: [this.item]
+      };
+      this.showAdded = true;
+      this.store.dispatch(new AddToCart(tempCart));
+
+      setTimeout(() => {
+        this.showAdded = false;
+      }, 3000)
+    }
   }
 
   ngOnDestroy() {

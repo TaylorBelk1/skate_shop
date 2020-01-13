@@ -73,3 +73,21 @@ h6 {
     font-size: 22px;
     font-family: 'Raleway-Bold';
 }
+
+.add-to-cart {
+    border: none;
+    background-color: #0D1B2A;
+    color: #fff;
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+}
+
+.added {
+    width: 90px;
+    padding: 5px 10px;
+    border: 1px solid #0D1B2A;
+    text-align: center;
+    font-family: 'Raleway-Semi-Bold';
+    font-size: 12px;
+}

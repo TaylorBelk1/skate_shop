@@ -14,6 +14,14 @@ export function cartReducer(
         case ECartActions.ClearCartItems:
             return state = initCartState;
 
+        case ECartActions.AddToCart:
+            const tempItems = state.items.concat(action.payload.items);
+            return {
+                ...state,
+                info: action.payload.info,
+                items: tempItems
+            }
+
         default:
             return state;
     }
